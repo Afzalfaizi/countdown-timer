@@ -39,7 +39,7 @@ export default function Home() {
         <h1 className=" text-black text-[72px] text-center mt-20 font-bold  ">
           <h1 className=" text-red-700">Notice!</h1>
           {" "}
-          The 1st of class of <span className=" text-red-700"> Quarter 3 </span>
+          The 1st class of <span className=" text-red-700"> Quarter 3 </span>
           has been held this <span className=" text-red-700">
             {" "}
             Sunday{" "}
