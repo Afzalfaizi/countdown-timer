@@ -11,21 +11,21 @@ export default function Home() {
 
   useEffect(() => {
     // const target = new Date("12/31/2024 23:59:59");
-    const target = new Date("03/14/2024 18:14:00");
+    const target = new Date("03/15/2024 16:12:00");
 
     const interval = setInterval(() => {
       const now = new Date();
       const difference = target.getTime() - now.getTime();
       const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-      setDays(days);
+      setDays(d);
       const h = Math.floor(
         (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      setHours(hours);
+      setHours(h);
       const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      setMinutes(minutes);
+      setMinutes(m);
       const s = Math.floor((difference % (1000 * 60)) / 1000);
-      setSeconds(seconds);
+      setSeconds(s);
       if (d <= 0 && h <= 0 && m <= 0 && s <= m) {
         setPartyTime(true);
       }
@@ -36,37 +36,31 @@ export default function Home() {
   return (
     <div>
       {partyTime ? (
-        <div>
-          {" "}
-          <h1> This is Party Time!</h1>
-          <video autoPlay loop muted>
-            <source src="/party.mp4" />
-          </video>
-        </div>
+          <h1 className=" text-black text-[9rem] text-center mt-48 "> Happy New Year!</h1>
       ) : (
         <>
-          <div className="bg-gray-900 text-white p-40 rounded-xl">
+          <div className=" text-black p-40 rounded-xl">
             <div className="flex justify-center px-8">
               <div className="timer-wrapper">
                 <div className="timer-inner">
                   <div className="timer-segment">
-                    <span className="text-4xl font-bold">{days}</span>
-                    <span className="text-xl block">Days</span>
+                    <span className="time">{days}</span>
+                    <span className="label">Days</span>
                   </div>
                   <span className="divider">:</span>
                   <div className="timer-segment">
-                    <span className="text-4xl font-bold">{hours}</span>
-                    <span className="text-xl block">Hours</span>
+                    <span className="time">{hours}</span>
+                    <span className="label">Hours</span>
                   </div>
                   <span className="divider">:</span>
                   <div className="timer-segment">
-                    <span className="text-4xl font-bold">{minutes}</span>
-                    <span className="text-xl block">Minutes</span>
+                    <span className="time">{minutes}</span>
+                    <span className="label">Minutes</span>
                   </div>
                   <span className="divider">:</span>
                   <div className="timer-segment">
-                    <span className="text-4xl font-bold">{seconds}</span>
-                    <span className="text-xl block">Seconds</span>
+                    <span className="time">{seconds}</span>
+                    <span className="label">Seconds</span>
                   </div>
                 </div>
               </div>
