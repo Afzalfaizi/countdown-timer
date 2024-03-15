@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     // const target = new Date("12/31/2024 23:59:59");
-    const target = new Date("03/15/2024 16:28:00");
+    const target = new Date("03/15/2024 16:32:00");
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -36,7 +36,17 @@ export default function Home() {
   return (
     <div>
       {partyTime ? (
-          <h1 className=" text-black text-[9rem] text-center mt-48 "> Happy New Year!</h1>
+        <h1 className=" text-black text-[72px] text-center mt-20 font-bold  ">
+          <h1 className=" text-red-700">Notice!</h1>
+          {" "}
+          The 1st of class of <span className=" text-red-700"> Quarter 3 </span>
+          has been held this <span className=" text-red-700">
+            {" "}
+            Sunday{" "}
+          </span>{" "}
+          from <span className=" text-red-700"> 9 am to 12 pm </span> due to
+          Ramadan!
+        </h1>
       ) : (
         <>
           <div className=" text-black p-40 rounded-xl">
