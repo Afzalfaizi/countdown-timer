@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [partyTime, setPartyTime] = useState(false);
-  const [days, setDays] = useState();
-  const [hours, setHours] = useState();
-  const [minutes, setMinutes] = useState();
-  const [seconds, setSeconds] = useState();
+  const [days, setDays] = useState<number | undefined>(undefined);
+  const [hours, setHours] = useState<number | undefined>(undefined);
+  const [minutes, setMinutes] = useState<number | undefined>(undefined);
+  const [seconds, setSeconds] = useState<number | undefined>(undefined);
 
   useEffect(() => {
     // const target = new Date("12/31/2024 23:59:59");
-    const target = new Date("03/15/2024 16:12:00");
+    const target = new Date("03/15/2024 16:28:00");
 
     const interval = setInterval(() => {
       const now = new Date();
