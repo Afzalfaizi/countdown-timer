@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     // const target = new Date("12/31/2024 23:59:59");
-    const target = new Date("03/15/2024 18:59:00");
+    const target = new Date("03/16/2024 23:59:00");
 
     const interval = setInterval(() => {
       const now = new Date();
